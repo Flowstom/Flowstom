@@ -51,7 +51,7 @@ jobs:
           MINESTOM_VERSION: ${{ steps.version.outputs.version }}
 
       - name: Publish to Maven Central
-        if: github.repository_owner == 'Minestom'
+        if: github.repository_owner == 'Flowstom'
         run: ./gradlew publishAggregationToCentralPortal
         env:
           MINESTOM_VERSION: ${{ steps.version.outputs.version }}

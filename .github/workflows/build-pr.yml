@@ -17,12 +17,12 @@ jobs:
         with:
           # Allow caching for all branches in our repo;
           # this is so we don't get evicted, see Cache Optimization in action docs for more info
-          cache-read-only: ${{ github.repository_owner != 'Minestom' }}
+          cache-read-only: ${{ github.repository_owner != 'Flowstom' }}
       - name: Build
         run: ./gradlew test javadoc
   publish:
     name: Publish PR
-    if: contains(github.event.pull_request.labels.*.name, 'Publish Pull Request') && github.repository_owner == 'Minestom'
+    if: contains(github.event.pull_request.labels.*.name, 'Publish Pull Request') && github.repository_owner == 'Flowstom'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
@@ -37,7 +37,7 @@ jobs:
         with:
           # Allow caching for all branches in our repo;
           # this is so we don't get evicted, see Cache Optimization in action docs for more info
-          cache-read-only: ${{ github.repository_owner != 'Minestom' }}
+          cache-read-only: ${{ github.repository_owner != 'Flowstom' }}
 
       - name: Publish Artifacts
         env:
