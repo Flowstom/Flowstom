@@ -1,4 +1,4 @@
-![banner](flowstom_banner.png)
+![banner](flowstom-banner.png)
 
 # Flowstom
 
