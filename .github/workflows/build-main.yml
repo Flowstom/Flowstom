@@ -1,4 +1,4 @@
-name: Build PR
+name: Build Main
 on:
   push:
     branches: [ master ]
