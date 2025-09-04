@@ -6,7 +6,7 @@ plugins {
 
 val javaVersion = System.getenv("JAVA_VERSION") ?: "21"
 
-group = "net.minestom"
+group = "net.flowstom"
 
 repositories {
     mavenCentral()

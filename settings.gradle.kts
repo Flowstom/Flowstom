@@ -1,4 +1,4 @@
-rootProject.name = "minestom"
+rootProject.name = "flowstom"
 
 includeBuild("build-src")
 

@@ -8,8 +8,8 @@ plugins {
 
 val javaVersion = System.getenv("JAVA_VERSION") ?: "21"
 
-group = "net.minestom"
-version = System.getenv("MINESTOM_VERSION") ?: "dev"
+group = "net.flowstom"
+version = System.getenv("FLOWSTOM_VERSION") ?: "dev"
 
 configurations.all {
     // We only use Jetbrains Annotations

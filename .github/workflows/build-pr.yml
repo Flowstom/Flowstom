@@ -41,11 +41,11 @@ jobs:
 
       - name: Publish Artifacts
         env:
-          MINESTOM_VERSION: ${{ github.head_ref }}-SNAPSHOT
+          FLOWSTOM_VERSION: ${{ github.head_ref }}-SNAPSHOT
           SONATYPE_USERNAME: ${{ secrets.SONATYPE_USERNAME }}
           SONATYPE_PASSWORD: ${{ secrets.SONATYPE_PASSWORD }}
           GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
           GPG_PASSPHRASE: ${{ secrets.GPG_PASSWORD }}
         run: |
           ./gradlew nmcpPublishAggregationToCentralPortalSnapshots
-          echo "Version: ${MINESTOM_VERSION}" >> $GITHUB_STEP_SUMMARY
+          echo "Version: ${FLOWSTOM_VERSION}" >> $GITHUB_STEP_SUMMARY

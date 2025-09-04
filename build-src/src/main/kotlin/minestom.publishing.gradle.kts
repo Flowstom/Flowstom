@@ -4,55 +4,46 @@ plugins {
     alias(libs.plugins.nmcp)
 }
 
-val minestomDataVersion = libs.minestomData.get().version
-        ?: throw IllegalStateException("unable to determine Minecraft version")
-val mcVersion = minestomDataVersion.split("-")[0]
-
 publishing.publications.create<MavenPublication>("maven") {
     groupId = project.group.toString()
-    artifactId = project.name // eg "minestom" or "testing"
+    artifactId = project.name // eg "flowstom" or "testing"
     version = project.version.toString()
 
     from(project.components["java"])
 
     pom {
         name.set(this@create.artifactId)
-        description.set("$mcVersion Lightweight Minecraft server")
-        url.set("https://github.com/minestom/minestom")
+        description.set("A fork of Minestom aimed at simplifying the process of adding custom server-side content.")
+        url.set("https://github.com/flowstom/flowstom")
 
         licenses {
             license {
                 name.set("Apache 2.0")
-                url.set("https://github.com/minestom/minestom/blob/main/LICENSE")
+                url.set("https://github.com/flowstom/flowstom/blob/main/LICENSE")
             }
         }
 
         developers {
             developer {
-                id.set("TheMode")
-            }
-            developer {
-                id.set("mworzala")
-                name.set("Matt Worzala")
-                email.set("matt@hollowcube.dev")
+                id.set("McMelonTV")
             }
         }
 
         issueManagement {
             system.set("GitHub")
-            url.set("https://github.com/minestom/minestom/issues")
+            url.set("https://github.com/flowstom/flowstom/issues")
         }
 
         scm {
-            connection.set("scm:git:git://github.com/minestom/minestom.git")
-            developerConnection.set("scm:git:git@github.com:minestom/minestom.git")
-            url.set("https://github.com/minestom/minestom")
+            connection.set("scm:git:git://github.com/flowstom/flowstom.git")
+            developerConnection.set("scm:git:git@github.com:flowstom/flowstom.git")
+            url.set("https://github.com/flowstom/flowstom")
             tag.set("HEAD")
         }
 
         ciManagement {
             system.set("Github Actions")
-            url.set("https://github.com/minestom/minestom/actions")
+            url.set("https://github.com/flowstom/flowstom/actions")
         }
     }
 }

@@ -48,13 +48,13 @@ jobs:
       - name: Build javadoc
         run: ./gradlew javadoc
         env:
-          MINESTOM_VERSION: ${{ steps.version.outputs.version }}
+          FLOWSTOM_VERSION: ${{ steps.version.outputs.version }}
 
       - name: Publish to Maven Central
         if: github.repository_owner == 'Flowstom'
         run: ./gradlew publishAggregationToCentralPortal
         env:
-          MINESTOM_VERSION: ${{ steps.version.outputs.version }}
+          FLOWSTOM_VERSION: ${{ steps.version.outputs.version }}
           SONATYPE_USERNAME: ${{ secrets.SONATYPE_USERNAME }}
           SONATYPE_PASSWORD: ${{ secrets.SONATYPE_PASSWORD }}
           GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
