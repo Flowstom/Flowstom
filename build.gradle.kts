@@ -1,5 +1,6 @@
 plugins {
     `java-library`
+    alias(libs.plugins.lombok)
 }
 
 group = "net.flowstom"
